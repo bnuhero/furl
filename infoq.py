@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 import codecs
 import os
 import re
@@ -136,10 +135,10 @@ class Interview(object):
 														TIMES=unicode(self.TIMES_JS,'utf-8'), \
 														download = _('1. download '), \
 														video = _('video'), \
-														step1 = _(' to a directory using your donwload application.'), \
+														step1 = _(' to a directory.'), \
 														step2 = _('2. copy player.html to the same directory.'), \
 														step3 = _('3. browse player.html with Chrome, Safari, or IE 9+.'), \
-														hints = _('Your browser does not support HTML5 Video. <br>Please use Chrome, Safari, or IE 9+.'),\
+														hints = _('Your browser does not support HTML5 video. <br>Please use Chrome, Safari, or IE 9+.'),\
 														mp4=unicode(result.group(1),'utf-8'), \
 														mp4_url=unicode(self.mp4_url,'utf-8'), \
 														qa=qa, \
@@ -372,10 +371,10 @@ class Presentation(object):
 														TIMES=unicode(self.TIMES_JS,'utf-8'), \
 														copy=_('1. copy the '), \
 														urls_str=_('urls'), \
-														step1=_(', then download video and slides to a directory using your download application.'), \
+														step1=_(', then download them all to a directory.'), \
 														step2=_('2. copy player.html to the same directory.'), \
 														step3=_('3. browse player.html with Chrome, Safari, or IE 9+.'), \
-														hints=_('Your browser does not support HTML5 Video. <br>Please use Chrome, Safari, or IE 9+.'), \
+														hints=_('Your browser does not support HTML5 video. <br>Please use Chrome, Safari, or IE 9+.'), \
 														mp4=unicode(result.group(1),'utf-8'), \
 														urls=unicode(self.make_urls(),'utf-8'), \
 														infoq_logo=INFOQ_PNG_BASE64)

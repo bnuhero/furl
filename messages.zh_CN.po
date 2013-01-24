@@ -1,5 +1,5 @@
 # furl
-# Copyright (C) 2013 IO Studio, China
+# Copyright (C) 2013 I.O. Studio, China
 # liuquanbo <liuquanbo@gmail.com>, 2013.
 #
 msgid ""
@@ -14,87 +14,88 @@ msgstr ""
 "Content-Transfer-Encoding: utf-8\n"
 "Generated-By: pygettext.py 1.5\n"
 
-#: furl.py:77
-msgid "unknown url type"
-msgstr "不认识URL"
 
-#: furl.py:81
+#: furl.py:76
+msgid "unknown url type"
+msgstr "无法处理"
+
+#: furl.py:80
 msgid "Usage:"
 msgstr "用法："
 
-#: furl.py:82
-msgid "find urls of InfoQ presentation/interview video and slides/transcrits"
-msgstr "找出InfoQ演讲/访谈的视频和文稿/脚本的网址"
+#: furl.py:81
+msgid "find urls of the video and slides(or transcripts) in an InfoQ presentation(or interview) web page."
+msgstr "找出InfoQ专家讲座（访谈）视频和演示文稿（问答脚本）的网址。"
 
-#: furl.py:83
+#: furl.py:82
 msgid "arguments:"
 msgstr "参数："
 
-#: furl.py:84
-msgid "http proxy server and port, e.g., 127.0.0.1:8080"
-msgstr "http代理服务器地址和端口，例如，127.0.0.1:8080"
-
-#: furl.py:84
+#: furl.py:83
 msgid "optional"
 msgstr "可选参数"
 
-#: furl.py:85
+#: furl.py:83
+msgid "the http proxy server address and port number, e.g., 127.0.0.1:8080"
+msgstr "http代理服务器的地址和端口，例如，127.0.0.1:8080"
+
+#: furl.py:84
 msgid "required"
 msgstr "必需参数"
 
-#: furl.py:85
-msgid "url of InfoQ presentation/interview web page"
-msgstr "InfoQ演讲/访谈的URL"
+#: furl.py:84
+msgid "the url of an InfoQ presentation(or interview) web page"
+msgstr "InfoQ专家讲座（访谈）的网址"
 
-#: furl.py:117
+#: furl.py:116
 msgid "Invalid proxy setting: "
 msgstr "代理服务器的设置不正确："
 
-#: furl.py:151
+#: furl.py:150
 msgid "Impossible!"
 msgstr "绝无可能？！"
 
-#: infoq.py:135 infoq.py:370
+#: infoq.py:134 infoq.py:369
 msgid "HOWTO"
 msgstr "步骤"
 
-#: infoq.py:137
+#: infoq.py:136
 msgid "1. download "
-msgstr "1. 运行下载程序，把"
+msgstr "1. 下载"
 
-#: infoq.py:138
+#: infoq.py:137
 msgid "video"
 msgstr "视频"
 
-#: infoq.py:139
-msgid " to a directory using your donwload application."
-msgstr "下载到某个目录下面。"
+#: infoq.py:138
+msgid " to a directory."
+msgstr "到某个目录下；"
+
+#: infoq.py:139 infoq.py:375
+msgid "2. copy player.html to the same directory."
+msgstr "2. 把player.html复制到同一目录；"
 
 #: infoq.py:140 infoq.py:376
-msgid "2. copy player.html to the same directory."
-msgstr "2. 复制player.html到同一目录下。"
+msgid "3. browse player.html with Chrome, Safari, or IE 9+."
+msgstr "3. 使用Chrome、Safari或者IE 9+浏览器，浏览player.html。"
 
 #: infoq.py:141 infoq.py:377
-msgid "3. browse player.html with Chrome, Safari, or IE 9+."
-msgstr "3. 使用Chrome、Safari或者IE 9+浏览器，浏览player.html"
+msgid "Your browser does not support HTML5 video. <br>Please use Chrome, Safari, or IE 9+."
+msgstr "你的浏览器不支持HTML5 video。<br>请换用Chrome、Safari或者IE 9+浏览器。"
 
-#: infoq.py:142 infoq.py:378
-msgid "Your browser does not support HTML5 Video. <br>Please use Chrome, Safari, or IE 9+."
-msgstr "您的浏览器不支持HTML5 Video元素。<br>请换用Chrome、Safari或IE 9+浏览器。"
-
-#: infoq.py:230 infoq.py:459
+#: infoq.py:229 infoq.py:458
 msgid "NO mp4 found."
-msgstr "没有找到mp4视频。"
+msgstr "找不到mp4视频。"
 
-#: infoq.py:373
+#: infoq.py:372
 msgid "1. copy the "
 msgstr "1. 复制"
 
-#: infoq.py:374
+#: infoq.py:373
 msgid "urls"
-msgstr "这些网址"
+msgstr "这些资源的网址"
 
-#: infoq.py:375
-msgid ", then download video and slides to a directory using your download application."
-msgstr "，然后运行下载程序，把视频和演示文稿复制到某个目录下面。"
+#: infoq.py:374
+msgid ", then download them all to a directory."
+msgstr "，然后把它们下载到某个目录；"
 

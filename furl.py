@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
 import gettext
 import locale
 import os
@@ -79,10 +78,10 @@ def process(url, server=None, port='80'):
 
 def help():
 	return '\n'+_('Usage:')+' python /path/to/furl/furl.py [-p server:port] <url>'+'\n\n'+ \
-					_('find urls of InfoQ presentation/interview video and slides/transcrits')+'\n\n'+ \
+					_('find urls of the video and slides(or transcripts) in an InfoQ presentation(or interview) web page.')+'\n\n'+ \
 					_('arguments:')+'\n'+ \
-					'-p\t'+_('optional')+'\t'+_('http proxy server and port, e.g., 127.0.0.1:8080')+'\n'+ \
-					'url\t'+_('required')+'\t'+_('url of InfoQ presentation/interview web page')
+					'-p\t'+_('optional')+'\t'+_('the http proxy server address and port number, e.g., 127.0.0.1:8080')+'\n'+ \
+					'url\t'+_('required')+'\t'+_('the url of an InfoQ presentation(or interview) web page')
 def check_poxy(proxy):
 	port_re = re.compile(r'\d{2,4}')
 	parts = proxy.split(':')
@@ -124,10 +123,10 @@ def parse_args():
 	return (url, server, port)
 
 # Usage: python /path/to/furl/furl.py [-p server:port] <url>
-# find urls of InfoQ presentation/interview video and slides/transcripts
+# find urls of the video and slides(or transcripts) in an [InfoQ][2] presentation(or interview) web page.
 # arguments:
-#   -p    optional    http proxy proxy server and port, e.g. 127.0.0.1:8080
-#   url   required    url of InfoQ presentation/interview web page
+#   -p    optional    the http proxy proxy server address and port number, e.g. 127.0.0.1:8080
+#   url   required    the URL of an InfoQ presentation(or interview) web page
 #                     for example, 
 #                       http://www.infoq.com/interviews/end-to-end-javascript
 #                       http://www.infoq.com/cn/presentations/deep-learning-and-application-to-multimedia
@@ -135,15 +134,15 @@ def parse_args():
 #                       ...
 #
 # WHAT'S NEXT?
-# There is a file named player.html in current directory if we are successful to find the urls.
-# Browse this html file.
+# A new file named player.html will be created in current directory if we are successful to find the urls.
+# Browse player.html for more information.
 #
 
 if __name__ == '__main__':
 	#Internationalization
 	set_trans('messages')
 
-	#parse the arguments for url and proxy server/port
+	#parse the arguments
 	args = parse_args()
 	if len(args)==3:
 		process(regulate_url(args[0]), args[1], args[2])
