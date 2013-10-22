@@ -16,7 +16,7 @@ class Interview(object):
 	'InfoQ Interview Processing'
 
 	TITLE_RE = re.compile(r'<title>(.*)</title>')
-	TIMES_RE = re.compile(r'\s+TIMES\s*=\s*new\s+Array\s*\(.*\)[\s*;|\s*,]')
+	TIMES_RE = re.compile(r'\s+TIMES\s*=\s*new\s+Array\s*\(.*\)')
 	MP4_RE = re.compile(r'<\s*source\s+src\s*=\s*"(http://.*/.+\.mp4)"\s*/>')
 	QUESTION_RE = re.compile(r'<\s*div\s+id\s*=\s*"question\d+"\s+class\s*=\s*"question"\s*>')
 	SPAN_RE = re.compile(r'<\s*span\s+onclick\s*=\s*"goToTime\((\d+)\);"\s*>(.*)</span>')
@@ -175,6 +175,7 @@ class Interview(object):
 						result = Interview.TIMES_RE.search(line)
 						if result:
 							self.TIMES_JS = result.group(0)
+							self.TIMES_JS = 'var '+self.TIMES_JS+';'
 							self.checked['TIMES'] = True
 							if self.all_checked():
 								break
@@ -237,8 +238,8 @@ class Interview(object):
 class Presentation(object):
 	'InfoQ Presentation Processing'
 	TITLE_RE = re.compile(r'<title>(.*)</title>')
-	SLIDES_RE = re.compile(r'\s+slides\s*=\s*new\s+Array\s*\((.*)\)[\s*;|\s*,]')
-	TIMES_RE = re.compile(r'\s+TIMES\s*=\s*new\s+Array\s*\(.*\)[\s*;|\s*,]')
+	SLIDES_RE = re.compile(r'\s+slides\s*=\s*new\s+Array\s*\((.*)\)')
+	TIMES_RE = re.compile(r'\s+TIMES\s*=\s*new\s+Array\s*\(.*\)')
 	MP4_RE = re.compile(r'<\s*source\s+src\s*=\s*"(http://.*/.+\.mp4)"\s*/>')
 
 	def reset(self):
@@ -432,6 +433,7 @@ class Presentation(object):
 						result = Presentation.TIMES_RE.search(line)
 						if result:
 							self.TIMES_JS = result.group(0)
+							self.TIMES_JS = 'var '+self.TIMES_JS+';'
 							self.checked['TIMES'] = True
 							if self.all_checked():
 								break
